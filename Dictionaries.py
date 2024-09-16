@@ -1,6 +1,6 @@
 '''
 Tracy Ye
-<What is TNPG?>
+JST
 SoftDev
 Friday's activity on python dictionaries. How to return a random output in dictionary?
 2024-09-16
@@ -27,4 +27,16 @@ def dict():
     period = random.choice(list(krewes))
     return random.choice(krewes[period])
     
-print(dict())
+# print(dict())
+
+def dictInt():
+    keyLen = len(krewes.keys())
+    randomKey = random.randint(0,keyLen)
+    key = list(krewes.keys())[randomKey]
+    
+    valuesLen = len(krewes[key])
+    randomValue = random.randint(0,valuesLen)
+    value = krewes[key][randomValue]
+    return value
+    
+print(dictInt())
