@@ -23,20 +23,22 @@ krewes = {
               ]
          }
 
+# solution using random.choice
 def dict():
     period = random.choice(list(krewes))
     return random.choice(krewes[period])
     
-# print(dict())
+print(dict())
 
+# solution using random.randint
 def dictInt():
     keyLen = len(krewes.keys())
     randomKey = random.randint(0,keyLen)
-    key = list(krewes.keys())[randomKey]
+    key = list(krewes.keys())[randomKey] # returns random key
     
     valuesLen = len(krewes[key])
     randomValue = random.randint(0,valuesLen)
-    value = krewes[key][randomValue]
+    value = krewes[key][randomValue] #returns random value in the chosen key
     return value
     
 print(dictInt())
