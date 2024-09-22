@@ -3,7 +3,7 @@ Tracy Ye
 Loonch
 SoftDev
 K03 _py : Reviewing lists in python.
-Time Spent:
+Time Spent: 30 mins
 '''
 
 def first_last6(nums):
