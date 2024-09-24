@@ -1,6 +1,6 @@
-# Clyde 'Thluffy' Sinclair
+# Tracy Ye
 # SoftDev
-# September 2024
+# September 23, 2024
 
 from flask import Flask
 app = Flask(__name__)           #create instance of class Flask
