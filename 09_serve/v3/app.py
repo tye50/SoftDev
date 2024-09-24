@@ -1,6 +1,6 @@
-# Clyde 'Thluffy' Sinclair
+# Tracy Ye
 # SoftDev
-# September 2024
+# September 23, 2024
 
 from flask import Flask
 app = Flask(__name__)                 #create instance of class Flask
@@ -12,4 +12,12 @@ def hello_world():
     return "No hablo queso!"
 
 app.debug = True
+
 app.run()
+
+'''
+I had no clue what debugger did, so I searched it up. Debugger apparently
+makes it harder for attackers to access and change your code via flask?
+And you can access it using /console, but I don't know where to write the
+(didn't do anything in the terminal).
+'''
