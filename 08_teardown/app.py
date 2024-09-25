@@ -20,12 +20,12 @@ the same as typed in your hello_world() function down there. Pero hablo queso.
 
 
 QCC:
-0. Not sure, but working with websites gives me HTML ptsd.
+0. This resembles java classes
 1. Maybe it refers to a path like in the terminal?
-2. You print to the website page? 
-3. You print what is in the function you defined.
-4. You are printing to the website? Because I opened the website link.
-5. I'm not quite sure what this is similar to. We did work with printing to websites using python for a bit in annual computer science.
+2. You print to the terminal?.
+3. You print the website link.
+4. You are printing to the website. Because I opened the website link.
+5. It looks like java classes and defining an object. 
  ...
 
 INVESTIGATIVE APPROACH:
