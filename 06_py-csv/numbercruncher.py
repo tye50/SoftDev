@@ -9,17 +9,20 @@ Time Spent : 2 hours
 
 import csv, random
 
+occupation_list = []
+percentages = []
+
 with open("occupations.csv", newline='') as file:
     r = csv.DictReader(file)
     
+    for row in r: # read the dictionary
+        occupation_list.append(row['Job Class']) # fill list with occupations
+        percentages.append((float)(row['Percentage'])) # fill list with casted percents
 
-    random = random.randint(0, 998) # pick random between 0 and total x10
-    num = 0 # add on percent x10 each row, if > rand then return job
-    
-    for row in r:
-        # print(row['Job Class'], row['Percentage']) dictreader creates a dictionary of dictionaries (?)
-        values = list(row.values()) # list containing job[0], percent[1]
-        num += float(values[1])*10
-        if (num >= random):
-            print(values[0])
-            break
+    occupation_list = occupation_list[1:-1] # remove the first and last
+    percentages = percentages[1:-1] # remove the first and last
+
+def select_occupation(occupation_list, percentages):
+    return random.choices(occupation_list, weights=percentages, k=1) # using the built in weighted random, return a random occupation
+
+print(select_occupation(occupation_list, percentages))
