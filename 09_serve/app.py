@@ -1,6 +1,6 @@
 '''
 Tracy Ye
-Loonch
+NewMixUpGroup
 SoftDev
 K09 -- Putting it Together : Learning about Flask and app.py
 2024-09-24
@@ -16,14 +16,14 @@ percentages = []
 with open('occupations.csv', newline ='') as csvfile:
     file = csv.DictReader(csvfile)
     for row in file:
-        occupation_list.append(row['Job Class'])
-        percentages.append((float)(row['Percentage']))
+        occupation_list.append(row['Job Class']) # fill list with occupations
+        percentages.append((float)(row['Percentage'])) # fill list with casted percents
 
-occupation_list = occupation_list[1:-1]
-percentages = percentages[1:-1]
+occupation_list = occupation_list[1:-1] # remove the first and last
+percentages = percentages[1:-1] # remove the first and last
 
 def select_occupation(occupation_list, percentages):
-    return random.choices(occupation_list, weights=percentages, k=1)
+    return random.choices(occupation_list, weights=percentages, k=1) # using the built in weighted random, return a random occupation
      
     # -------------------------------------------------------------
 
@@ -33,6 +33,6 @@ app = Flask(__name__)
 @app.route("/")
 def randOccupation():
     print(__name__)
-    return select_occupation(occupation_list, percentages)
+    return select_occupation(occupation_list, percentages) # calling the function defined above
 
-app.run()
+app.run(port=5001) # We were having trouble in class with port 5000 already being used, so we specified the port
