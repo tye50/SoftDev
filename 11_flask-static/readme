@@ -11,3 +11,8 @@ it returns a random float number.
 
 You can change the route in the @app.route() line to change from what
 file code is ran and returned. 
+
+----
+
+@app.route(str) will display whatever is in the function defined under the route inside MAIN
+/static/.html will return whatever is in that html file (not what is in MAIN)!

@@ -21,11 +21,11 @@ def h():
     print(__name__)
     return str(random.random())
 
-'''
-@app.route("/static/fixie.html")
+
+@app.route("/static/x")
 def fix():
     return "why does keeping this open return an error?"
-'''
+
 
 if __name__ == "__main__":  # true if this file NOT imported
     app.debug = True        # enable auto-reload upon code change
