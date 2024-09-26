@@ -1,0 +1,13 @@
+Opening the app.py link at first will return "No hablo queso!". 
+
+I uncommented the code in app.py and then opened the link in foo.html
+and saw "0.7144435224241726". When I opened the link in the foo file, 
+it downloaded a file called "foo" which was just another copy of the 
+foo file. 
+
+I recommented the code in app.py and reopened the website to find the 
+message, "Is this plaintext, though?". When the code is uncommented,
+it returns a random float number. 
+
+You can change the route in the @app.route() line to change from what
+file code is ran and returned. 
