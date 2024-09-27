@@ -1,17 +1,21 @@
 # Tracy Ye
-# JST
+# Cloe, Tracy, Tiffany
 # Sep 26, 2024
 
 """
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Q0:
-<your response here>
+I predict that it will make the test_temp() not work. Maybe an error will be thrown and the page won't run.
+When it is run with render_template: it returns the numbers inside coll in separate rows.
+When it is run without render_template: it returns a NameError stating that render_template function was not defined.
 
 Q1:
-<your response here>
+Yes, we all say the url should look like 127.0.0.1:5000/my_foist_template
 
 Q2:
-<your response here>
+arg1 is the file that will serve as the template
+arg2 replaces the variables defined in {{}} with their cooresponding value
+arg3 is the same as arg2, but with variable collection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
 
