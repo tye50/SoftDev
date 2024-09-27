@@ -1,5 +1,5 @@
 # Tracy Ye
-# Cloe, Tracy, Tiffany
+# Untitled
 # Sep 26, 2024
 
 """
@@ -19,13 +19,19 @@ arg3 is the same as arg2, but with variable collection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
 
-
+'''
+Purple Screen of Death
+a) If you try to return something that has not been defined. In this case, a function.
+b) You can ignore the tracebacks that happen inside the flask package.
+c) The first line with the problem found and the last line in the traceback which shows which line the error was found in.
+d) No, I do not smell danger. This looks helpful.
+'''
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Q0: What will happen if you remove render_template from the following statement?
 # (log prediction before executing...)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-from flask import Flask, render_template
+from flask import Flask
 app = Flask(__name__)
 
 @app.route("/")
@@ -44,6 +50,9 @@ def test_tmplt():
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     return render_template( 'model_tmplt.html', foo="fooooo", collection=coll)
 
+@app.route("/my_scnd_template") # testing the error thing
+def dos():
+    return hello
 
 if __name__ == "__main__":
     app.debug = True
