@@ -31,7 +31,7 @@ d) No, I do not smell danger. This looks helpful.
 # Q0: What will happen if you remove render_template from the following statement?
 # (log prediction before executing...)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
@@ -39,6 +39,7 @@ def hello_world():
     return "No hablo queso!"
 
 coll = [0,1,1,2,3,5,8]
+n = ["Tracy Ye", "Tiffany Yang", "Chloe Wong"]
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Q1: Can all of your teammates confidently predict the URL to use to load this page?
@@ -53,6 +54,10 @@ def test_tmplt():
 @app.route("/my_scnd_template") # testing the error thing
 def dos():
     return hello
+
+@app.route("/cool_web")
+def web():
+    return render_template("cool_website.html", names=n)
 
 if __name__ == "__main__":
     app.debug = True
