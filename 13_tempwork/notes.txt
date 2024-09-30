@@ -1,0 +1,2 @@
+title: Weighted Jobs in Room 250
+descriptive heading: Each refresh will return a weighted random job from the occupations table below. 
