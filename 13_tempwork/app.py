@@ -7,13 +7,27 @@ K13 -- Template for Success: Ultimate compilation of everything we have done and
 Time Spent : 
 '''
 
-from flask import Flask, render_template
-app = Flask(_name_)
+import csv, random
+jobs = []
+percents = []
+with open ("data/occupations.csv", newline='') as csvfile:
+    file = csv.DictReader(csvfile)
+    for i in file:
+        jobs.append(i["Job Class"])
+        percents.append((float)(i["Percentage"]))
+        
+jobs = jobs[:len(jobs)-1]
+percents = percents[:len(percents)-1]
 
-@app.route("/wdywtbwygp")
-def banana():
-    
+print(percents)
+# -------------------------------------------------------
 
-if _name_ == "_main_":
-    app.debug = True
-    app.run()
+# from flask import Flask, render_template
+# app = Flask(_name_)
+# 
+# @app.route("/wdywtbwygp")
+# def banana():
+#    
+# if _name_ == "_main_":
+#     app.debug = True
+#     app.run()
