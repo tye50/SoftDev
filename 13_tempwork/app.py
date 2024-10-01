@@ -10,24 +10,27 @@ Time Spent :
 import csv, random
 jobs = []
 percents = []
+header = []
 with open ("data/occupations.csv", newline='') as csvfile:
     file = csv.DictReader(csvfile)
     for i in file:
         jobs.append(i["Job Class"])
         percents.append((float)(i["Percentage"]))
+    header = list(i.keys())
         
 jobs = jobs[:len(jobs)-1]
 percents = percents[:len(percents)-1]
 
-print(percents)
+print(header)
 # -------------------------------------------------------
 
-# from flask import Flask, render_template
-# app = Flask(_name_)
-# 
-# @app.route("/wdywtbwygp")
-# def banana():
-#    
-# if _name_ == "_main_":
-#     app.debug = True
-#     app.run()
+from flask import Flask, render_template
+app = Flask(__name__)
+
+@app.route("/wdywtbwygp")
+def banana():
+    return render_template("tablified.html", j = jobs, p = percents, h = header)
+    
+if __name__ == "__main__":
+        app.debug = True
+        app.run()

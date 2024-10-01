@@ -7,9 +7,17 @@
     
     <body>
     <center><table>
-        {% for i in jobs %}
+        <tr>
+            {% for i in h %}
+                <th> {{ i}} </th>
+            {% endfor %}
+        <tr>
+        {% for i in j %}
             <tr>
-                <td> {{
+                <td> {{ i }} </td>
+                <td> {{ p[loop.index0] }} </td>
+            </tr>
+         {% endfor %}
     </table></center
     </body>
 </html>
