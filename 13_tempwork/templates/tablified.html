@@ -2,22 +2,88 @@
 
 <html>
     <head>
-    
+        <title> {{ t }} </title>
+        <style>
+            body {
+                background-color: #e8edeb;
+                overflow: hidden;
+                padding: -200px;
+            }
+            th {
+                border-bottom: 2px solid #b0b0b0;
+            }
+            td { 
+                padding-left: 25px; 
+                border-bottom: 1px solid #ddd;
+            }
+            h1 {
+                text-align: center;
+                transform: translate(-17%, 800%);
+            }
+            .d1 {
+                text-align: center;
+                font-style: italic;
+                transform: translate(-17%, 1550%);
+            }
+            .d2 {
+                transform: translate(-100px, -190px);
+            }
+            .d3 {
+                font-size: 20px;
+                text-align: center;
+                transform: translate(-17%, 300%);
+            }
+            .d4 {
+                width: 800px;
+                height: 80px;
+                line-height: 75px;
+                border: 1px solid #b0b0b0;
+                background-color: #cbd6d2;
+                font-size: 40px;
+                text-align: center;
+                transform: translate(100px, -70px);
+            }
+        </style>
     </head>
     
     <body>
-    <center><table>
-        <tr>
-            {% for i in h %}
-                <th> {{ i}} </th>
+        <h1>
+            ~ {{ t }} ~
+        </h1>
+        
+        <div class="d1">
+            Each refresh of the page will return a random weighted job from the occupations table to the right.
+        </div>
+        
+        <div class="d3">
+            JST
+            <br>--------------<br>
+            {% for i in r %}
+                {{ i }}
+                {% if not loop.last %} 
+                    <br>
+                {% endif %}
             {% endfor %}
-        <tr>
-        {% for i in j %}
-            <tr>
-                <td> {{ i }} </td>
-                <td> {{ p[loop.index0] }} </td>
-            </tr>
-         {% endfor %}
-    </table></center
+        </div>
+        
+        <div class="d4">
+            {{ randW[0] }}
+        </div>
+        
+        <div class="d2">
+            <table align="right">
+                <tr>
+                    {% for i in h %}
+                        <th> {{ i}} </th>
+                    {% endfor %}
+                <tr>
+                {% for i in j %}
+                    <tr>
+                        <td> {{ i }} </td>
+                        <td> {{ p[loop.index0] }} </td>
+                    </tr>
+                 {% endfor %}
+            </table>
+        </div>
     </body>
 </html>
