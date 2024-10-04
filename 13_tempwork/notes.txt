@@ -1,2 +1,16 @@
+Tracy Ye
+JST
+SoftDev
+K13 -- Template for Success: Ultimate compilation of everything we have done and learned so far!
+2024-10-02
+Time Spent : 2h
+
 title: Weighted Jobs in Room 250
 descriptive heading: Each refresh will return a weighted random job from the occupations table below. 
+
+````EGO
+
+It was a really good read. The way Bill G. faces critism and corrections is really admirable, and I hope can
+work towards that mindset. This reading kind of helps explain how you handle your SoftDev class!
+
+- Tracy

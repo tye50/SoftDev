@@ -1,3 +1,12 @@
+<!-- 
+Tracy Ye
+JST
+SoftDev
+K13 -- Template for Success: Ultimate compilation of everything we have done and learned so far!
+2024-10-02
+Time Spent : 2h
+-->
+
 <!DOCTYPE html>
 
 <html>
@@ -16,6 +25,9 @@
                 padding-left: 25px; 
                 border-bottom: 1px solid #ddd;
             }
+            td:hover {
+                background-color: #cbd6d2
+            }
             h1 {
                 text-align: center;
                 transform: translate(-17%, 800%);
@@ -23,7 +35,7 @@
             .d1 {
                 text-align: center;
                 font-style: italic;
-                transform: translate(-17%, 1550%);
+                transform: translate(-17%, 790%);
             }
             .d2 {
                 transform: translate(-100px, -190px);
@@ -43,6 +55,9 @@
                 text-align: center;
                 transform: translate(100px, -70px);
             }
+            a {
+                text-decoration: none;
+            }
         </style>
     </head>
     
@@ -52,7 +67,7 @@
         </h1>
         
         <div class="d1">
-            Each refresh of the page will return a random weighted job from the occupations table to the right.
+            Each refresh of the page will return a random weighted job from the occupations table to the right.<br>Click on an occupation in the table to learn more about it!
         </div>
         
         <div class="d3">
@@ -74,12 +89,14 @@
             <table align="right">
                 <tr>
                     {% for i in h %}
-                        <th> {{ i}} </th>
+                        {% if not loop.last %}
+                            <th> {{ i }} </th>
+                        {% endif %}
                     {% endfor %}
                 <tr>
                 {% for i in j %}
                     <tr>
-                        <td> {{ i }} </td>
+                        <td> <a href={{ l[loop.index0] }}>{{ i }}</a> </td>
                         <td> {{ p[loop.index0] }} </td>
                     </tr>
                  {% endfor %}
