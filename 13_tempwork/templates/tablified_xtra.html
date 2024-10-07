@@ -12,7 +12,55 @@ Time Spent : 2h
 <html>
     <head>
         <title> {{ t }} </title>
-        
+        <style>
+            body {
+                background-color: #e8edeb;
+                overflow: hidden;
+                padding: -200px;
+            }
+            th {
+                border-bottom: 2px solid #b0b0b0;
+            }
+            td { 
+                padding-left: 25px; 
+                border-bottom: 1px solid #ddd;
+            }
+            td:hover {
+                background-color: #cbd6d2
+            }
+            h1 {
+                text-align: center;
+                transform: translate(-17%, 800%);
+            }
+            .d1 {
+                text-align: center;
+                font-style: italic;
+                transform: translate(-17%, 790%);
+            }
+            .d2 {
+                transform: translate(-100px, -190px);
+            }
+            .d3 {
+                font-size: 20px;
+                text-align: center;
+                transform: translate(-17%, 300%);
+            }
+            .d4 {
+                width: 800px;
+                height: 80px;
+                line-height: 75px;
+                border: 1px solid #b0b0b0;
+                background-color: #cbd6d2;
+                font-size: 40px;
+                text-align: center;
+                transform: translate(100px, -70px);
+            }
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    
     <body>
         <h1>
             ~ {{ t }} ~
