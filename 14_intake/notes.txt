@@ -1,13 +1,13 @@
 Tracy Ye
 JST
 SoftDev
-K13 -- Template for Success: Ultimate compilation of everything we have done and learned so far!
+K14 -- Who do Forms Work For? : intro into flask forms
 2024-10-07
 Time Spent :
 
 
 DISCO:
-* 
+* N/A
 * 
 * 
 -----------------------------------------------------------------------
@@ -21,13 +21,26 @@ Q/C/C:
 
 
 OTHER?
-* 
+* N/A
 * 
 * 
 -----------------------------------------------------------------------
 
 
+K14 Notes: After travling
 
-
+print("\n\n\n")
+    prints new lines in terminal
+print("***DIAG: this Flask obj ***") +etc.
+    prints in terminal
+print(app)
+    <Flask 'app'> ; prints name of Flask object
+print(request)
+    127.0.0.1 - - [08/Oct/2024 16:25:16] "GET / HTTP/1.1" 200 - ; prints url information
+print(request.args)
+    add into URL: /?blah --> ImmutableMultiDict([('tracy', '')]) ; into a dictionary, the username "blah" is added
+    add into URL: /? --> ImmutableMultiDict([]) ; the 'GET' query string is (?). Nothing in dictionary
+print(request.args['username'])
+    
 
 
