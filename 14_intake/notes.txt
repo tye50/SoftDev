@@ -14,9 +14,9 @@ DISCO:
 
 
 Q/C/C:
-* 
-* 
-* 
+* None of us know how to do forms on python
+* I'm very confused with todays assignment. Why does goo() get called every time app.py is ran?
+* What are all the things printed from .headers?
 -----------------------------------------------------------------------
 
 
