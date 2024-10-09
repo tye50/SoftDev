@@ -10,11 +10,15 @@ app = Flask(__name__)    #create Flask object
 
 @app.route("/")
 def disp_loginpage():
-    return render_template( 'greetings.html' )
+    return render_template( 'login.html' )
 
 
-@app.route("/POST") # , methods=['GET', 'POST'])
-def post():    return "Waaaa hooo HAAAH"  #response to a form submission
+@app.route("/resp", methods=['GET', 'POST'])
+def response():
+    if request.method == "GET":
+        return render_template("response.html", r = request.args['username'], method = request.method) #response to a form submission
+    if request.method == "POST":
+        return render_template("response.html", r = request.form['username'], method = request.method) #response to a form submission
 
 
     

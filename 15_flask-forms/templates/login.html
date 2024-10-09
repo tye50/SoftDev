@@ -11,7 +11,7 @@
     <title> greetings </title>
     <style>
         body {
-            transform: translate(0%, 75%);
+            transform: translate(0%, 80%);
         }
         .d1 {
             font-size: 17px;
@@ -37,15 +37,16 @@
     </div>
 
     <h3>
-      Enter your username below to proceed.
+      Want to know more about GET and POST?
     </h3>
-    <form action="/auth">cq
-        {}     {}
-    
-    
-    
+    <form action="/resp" method="GET">
       <input type="text" name="username">
-      <input type="submit" name="sub1">
+      <input type="submit" value="Submit Via Get">
+    </form>
+    <br>
+    <form action="/resp" method="POST">
+      <input type="text" name="username">
+      <input type="submit" value="Submit Via Post">
     </form>
     <br>
   </center></body>
