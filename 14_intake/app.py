@@ -47,9 +47,9 @@ def disp_loginpage():
 #     print("***DIAG: request obj ***")   # Never mind, we have no clue what this does! ## Added new line when reran: ## Rerunning has new line, '***DIAG: request obj ***'
 #     print(request)   # We ask for a user input and then print it in the terminal ## Added a new line in terminal that says <Request 'http://127.0.0.1:5000/' [GET]>
 #     print("***DIAG: request.args ***")   # Never mind, we have no clue what this does! ## Rerunning has new line, '***DIAG: request.args ***'
-     print(request.args)   # Perhaps an error ## ImmutableMultiDict([])
+#     print(request.args)   # Perhaps an error ## ImmutableMultiDict([])
 #     print("***DIAG: request.args['username']  ***")   # Never mind, we have no clue what this does! ## ***DIAG: request.args['username']  ***
-     print(request.args['username'])   # Maybe it asks for a 'username' input ## BadREquestKeyError
+#     print(request.args['username'])   # Maybe it asks for a 'username' input ## BadREquestKeyError
 #     print("***DIAG: request.headers ***")   # Never mind, we have no clue what this does! ## ***DIAG: request.headers ***
 #     print(request.headers)   # Mayhaps an error # Added a ton of lines 
      return render_template( 'login.html' )
@@ -68,10 +68,16 @@ def authenticate():
 #     print(request.args['username'])   ## did not crash this time
 #     print("***DIAG: request.headers ***")
 #     print(request.headers) ## same things as above
-    return "Waaaa hooo HAAAH"  #response to a form submission
+     return "Waaaa hooo HAAAH, said "+request.args['username']  #response to a form submission
 
+@app.route('/login', methods=["GET"])
+def GET():
+    return request.args['uname']
 
-    
+@app.route('/login', methods=["POST"])
+def POST():
+    return request.form['uname']
+
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
     app.debug = True 

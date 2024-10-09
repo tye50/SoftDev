@@ -29,6 +29,9 @@ OTHER?
 
 K14 Notes: After travling
 
+import testmod0
+    importing a file automatically runs it
+
 print("\n\n\n")
     prints new lines in terminal
 print("***DIAG: this Flask obj ***") +etc.
@@ -41,6 +44,38 @@ print(request.args)
     add into URL: /?blah --> ImmutableMultiDict([('tracy', '')]) ; into a dictionary, the username "blah" is added
     add into URL: /? --> ImmutableMultiDict([]) ; the 'GET' query string is (?). Nothing in dictionary
 print(request.args['username'])
+    first time crashes because login.html hadn't been loaded, meaning key:'username' doesn't exist
+print(request.headers)
+    prints a ton of information about the user&operating system&web browser
     
+<form action="/auth">
+    <input type="text" name="username">
+    <input type="submit" value="sub1">
+</form>
+
+        action="/auth"
+            pressing 'submit' will lead to /auth page
+        input type="text"
+            input type will be a textbox. Others are bubbles (radio) and checkboxes (checkbox)
+        name="username"
+            defines the key's 'name' associated with the input value 
+        input type="submit" value="howdy"
+            creates the submit button and changes the name of the button
+
+@route /auth
+
+print(request.args)
+    ImmutableMultiDict([('username', '')]) ; '' is filled with whatever is in your textbox
+print(request.args['username'])
+    prints out whatever was in your textbox
 
 
+GET
+    - the default
+    - request.args[''] to return the input
+    = GET grabs, reads, and changes the URL for information to load the dict
+
+POST
+    - specify with method='POST'
+    - request.form[''] to return the input
+    = POST relies on the information sent through forms, meaning the URL will not change
