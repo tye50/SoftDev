@@ -13,8 +13,8 @@ DISCO:
 
 
 Q/C/C:
-* 
-* 
+* https://www.geeksforgeeks.org/how-to-use-flask-session-in-python-flask/#
+* info on how to use sessions...
 * 
 -----------------------------------------------------------------------
 
