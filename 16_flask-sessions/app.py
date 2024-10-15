@@ -21,8 +21,8 @@ def disp_loginpage():
 @app.route("/resp", methods=['GET', 'POST'])
 def response():
     if 'username' in session:
-        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        print(request.method)
+        # print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        # print(request.method)
         return render_template("response.html", r = session['username'], method = request.method)
     elif request.method == "GET":
         session['username'] = request.args['username']
