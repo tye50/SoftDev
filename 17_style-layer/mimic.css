@@ -1,0 +1,49 @@
+html {
+	font-family : arial;
+	overflow: hidden;
+}
+body {
+	border-style : solid;
+	border-color : #636363;
+	border-width : 20px;
+}
+.d1 {
+	height : 70px;
+	background-color : #bfbfbf;
+	color : #ffffff;
+	font-size : 60px;
+	text-align : center;
+	padding : 25px;
+	font-weight : bold;
+}
+.d2 {
+	height : 470px;
+	background-color : #787878;
+	padding-top : 20px;
+	padding-left : 15px;
+	padding-bottom : 15px;
+	font-size : 30px;
+	font-weight : bold;
+}
+.d3 {
+	translate : 0px -475%;
+	padding-left : 15px;
+	font-size : 25px;
+	color : #ffffff;
+}
+.d4 {
+	translate : 25% -130%;
+	width: 78%;
+	font-size : 19.8px;
+	font-weight : bold;
+}
+.d5 {
+	translate : 0% -580%;
+	height : 80px;
+	text-align : right;
+	color : #787878;
+	background-color : #575757;
+	font-size : 25px;
+	padding-top : 18px;
+	padding-right : 15px;
+}
