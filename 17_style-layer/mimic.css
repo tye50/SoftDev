@@ -1,4 +1,14 @@
+/*
+Tracy Ye
+JST
+SoftDev
+K17: The Sincerest Form of Flattery : CSS practice
+2024-10-16
+Time Spent :
+*/
+
 html {
+    display : flex;
 	font-family : arial;
 	overflow: hidden;
 }
@@ -17,28 +27,29 @@ body {
 	font-weight : bold;
 }
 .d2 {
-	height : 470px;
-	background-color : #787878;
+	width : 30% ;
 	padding-top : 20px;
 	padding-left : 15px;
-	padding-bottom : 15px;
 	font-size : 30px;
 	font-weight : bold;
+	float : left;
+	display : flex;
+	height : 100%;
 }
-.d3 {
-	translate : 0px -475%;
-	padding-left : 15px;
+p {
+    padding-top : 40px;
+    margin-left : -155px;
 	font-size : 25px;
 	color : #ffffff;
 }
 .d4 {
-	translate : 25% -130%;
-	width: 78%;
+    padding-top : 20px;
+	background-color : #787878;
 	font-size : 19.8px;
 	font-weight : bold;
+	text-align : left;
 }
 .d5 {
-	translate : 0% -580%;
 	height : 80px;
 	text-align : right;
 	color : #787878;

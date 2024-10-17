@@ -1,0 +1,60 @@
+/*
+Tracy Ye
+JST
+SoftDev
+K18 -- Serving Looks : Websites with static
+2024-10-17
+Time Spent :
+*/
+
+html {
+    display : flex;
+	font-family : arial;
+	overflow: hidden;
+}
+body {
+	border-style : solid;
+	border-color : #636363;
+	border-width : 20px;
+}
+.d1 {
+	height : 70px;
+	background-color : #bfbfbf;
+	color : #ffffff;
+	font-size : 60px;
+	text-align : center;
+	padding : 25px;
+	font-weight : bold;
+}
+.d2 {
+	width : 30% ;
+	padding-top : 20px;
+	padding-left : 15px;
+	font-size : 30px;
+	font-weight : bold;
+	float : left;
+	display : flex;
+	height : 100%;
+}
+p {
+    padding-top : 40px;
+    margin-left : -155px;
+	font-size : 25px;
+	color : #ffffff;
+}
+.d4 {
+    padding-top : 20px;
+	background-color : #787878;
+	font-size : 19.8px;
+	font-weight : bold;
+	text-align : left;
+}
+.d5 {
+	height : 80px;
+	text-align : right;
+	color : #787878;
+	background-color : #575757;
+	font-size : 25px;
+	padding-top : 18px;
+	padding-right : 15px;
+}
