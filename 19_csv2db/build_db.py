@@ -27,7 +27,8 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 with open("course.csv", newline='') as file:
     r = csv.DictReader(file)
-    print(r)
+    for i in r:
+        print(i)
 
 
 
@@ -37,10 +38,24 @@ with open("course.csv", newline='') as file:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
 
-command = ""          # test SQL stmt in sqlite3 shell, save as string
-c.execute(command)    # run SQL statement
+        #command = ""          # test SQL stmt in sqlite3 shell, save as string
+        #c.execute(command)    # run SQL statement
 
+command = "create table "
 #==========================================================
 
 db.commit() #save changes
 db.close()  #close database
+
+
+
+
+
+
+
+
+
+
+
+
+
