@@ -1,0 +1,38 @@
+Tracy Ye
+JST
+SoftDev
+skeleton/stub :: SQLITE3 BASICS : adventuring into SQLite3
+2024-10-18
+Time Spent :
+
+DISCOVERIES:
+----------------------------------------------------
+c(cursor object).execute("create table xMOVIESx(xTITLEx, xYEARx, xSCOREx)")		[xMOVIESx is table name, params are table values]
+c.tables		[displays all tables in db]
+c.execute("""insert into xMOVIESx values
+                ('mov1', 1975, 8.2),
+                ('mov2', 1971, 7.5)
+""")		[adds values to xMOVIESx]
+res = cur.execute("select xSCOREx from xMOVIESx")
+res.fetchall()		[returns [(8.2), (7.5)]]
+data = [
+        ('x', 1, 1),
+        ('y', 2, 2),
+        ('z', 3, 3)
+]
+cur.executemany("insert into xMOVIESx values(?,?,?)", data)		[inserts all into xMOVIESx]		? will fill in from xMOVIESx params
+for row in cur.execute("select xYEARx, xTITLEx from xMOVIESx order by xYEARx):
+    print(row)		[returns rows in ascending order of year+their titles
+====================================================
+
+
+QUESTIONS/COMMENTS/CONCERNS:
+----------------------------------------------------
+Q: a question
+Q: another question
+C: a comment or concern
+====================================================
+
+ref links :
+    https://docs.python.org/3/library/sqlite3.html#sqlite3-tutorial
+    https://www.sqlite.org/cli.html
