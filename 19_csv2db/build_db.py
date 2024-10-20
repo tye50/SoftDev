@@ -25,26 +25,23 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
 
-command = "create table courses(code text, mark integer, id integer)"
-c.execute(command)
-
 dict = []
-
-with open("course.csv", newline='') as file:
+with open("courses.csv", newline='') as file:
     r = csv.DictReader(file)
     for i in r:
         dict.append(i)
-print(dict)
+# print(dict)
+        
+c.execute("CREATE TABLE cour (code TEXT,mark INTEGER,id INTEGER)")
 for row in dict:
     vals = "("
-    vals = vals + (row.get("code")) + ", "
-    vals = vals + (row.get("mark")) + ", "
-    vals = vals + (row.get("id")) + ")"
+    vals += '"' + (row.get("code")) + '", '
+    vals += (row.get("mark")) + ", "
+    vals += (row.get("id")) + ")"
     
-    print(vals)
-    command = f'insert into courses (code,mark,id) values {vals}'
-    print(command)
-    c.execute(command)
+    #print(vals)
+    c.execute(f'INSERT INTO cour (code,mark,id) VALUES {vals}')
+
 #==========================================================
 
 db.commit() #save changes
