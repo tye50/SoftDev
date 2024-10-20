@@ -41,7 +41,10 @@ with open("course.csv", newline='') as file:
         #command = ""          # test SQL stmt in sqlite3 shell, save as string
         #c.execute(command)    # run SQL statement
 
-command = "create table "
+command = "create table courses(code, mark, id);"
+c.execute(command)
+command = "select * from courses;"
+c.execute(command)
 #==========================================================
 
 db.commit() #save changes
