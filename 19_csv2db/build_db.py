@@ -25,26 +25,26 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
 
+command = "create table courses(code text, mark integer, id integer)"
+c.execute(command)
+
+dict = []
+
 with open("course.csv", newline='') as file:
     r = csv.DictReader(file)
     for i in r:
-        print(i)
-
-
-
-"""
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-< < < INSERT YOUR TEAM'S DB-POPULATING CODE HERE > > >
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"""
-
-        #command = ""          # test SQL stmt in sqlite3 shell, save as string
-        #c.execute(command)    # run SQL statement
-
-command = "create table courses(code, mark, id);"
-c.execute(command)
-command = "select * from courses;"
-c.execute(command)
+        dict.append(i)
+print(dict)
+for row in dict:
+    vals = "("
+    vals = vals + (row.get("code")) + ", "
+    vals = vals + (row.get("mark")) + ", "
+    vals = vals + (row.get("id")) + ")"
+    
+    print(vals)
+    command = f'insert into courses (code,mark,id) values {vals}'
+    print(command)
+    c.execute(command)
 #==========================================================
 
 db.commit() #save changes

@@ -23,6 +23,19 @@ data = [
 cur.executemany("insert into xMOVIESx values(?,?,?)", data)		[inserts all into xMOVIESx]		? will fill in from xMOVIESx params
 for row in cur.execute("select xYEARx, xTITLEx from xMOVIESx order by xYEARx):
     print(row)		[returns rows in ascending order of year+their titles
+    
+    
+    
+f strings:
+    x = "blah"
+    "f'i say {x}'"
+    ret --> i say blah
+    
+    x = 4.5
+    "f'i dont say {x:.3f}'"
+    ret --> i dont say 4.500
+    
+    more formatting options in n&c --> notes --> f-strings
 ====================================================
 
 
