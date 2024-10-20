@@ -43,6 +43,25 @@ for row in dict:
     c.execute(f'INSERT INTO cour (code,mark,id) VALUES {vals}')
 
 #==========================================================
+    
+dict = []
+with open("students.csv", newline='') as file:
+    r = csv.DictReader(file)
+    for i in r:
+        dict.append(i)
+#print(dict)
+        
+c.execute("CREATE TABLE studs (name TEXT,age INTEGER,id INTEGER)")
+for row in dict:
+    vals = "("
+    vals += '"' + (row.get("name")) + '", '
+    vals += (row.get("age")) + ", "
+    vals += (row.get("id")) + ")"
+    
+    #print(vals)
+    c.execute(f'INSERT INTO studs (name,age,id) VALUES {vals}')
+    
+#==========================================================
 
 db.commit() #save changes
 db.close()  #close database
