@@ -34,7 +34,7 @@ def auth():
     
     result = authenticate(user, passw)
 
-    flash('WOOHOO!')
+    #flash('WOOHOO!')
 
     if result == SUCCESS:
         session['user'] = user
