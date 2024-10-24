@@ -28,8 +28,7 @@ for row in dict:
 
 # ---
 
-c.execute("""IF COL_LENGTH('cour', 'sound')IS NOT NULL
-    ALTER TABLE cour ADD sound TEXT""")
+c.execute("ALTER TABLE cour ADD sound TEXT")
 #==========================================================
 
 db.commit() #save changes
