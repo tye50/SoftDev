@@ -28,7 +28,7 @@ for row in dict:
 
 # ---
 
-c.execute("ALTER TABLE cour ADD sound TEXT")
+c.execute("if not exists (select column_name from cour where column_name = sound) ALTER TABLE cour ADD sound TEXT")
 #==========================================================
 
 db.commit() #save changes
