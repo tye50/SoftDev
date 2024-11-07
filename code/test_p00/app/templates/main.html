@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 
 <head>
-    <title> </title>
+    <title> project zero </title>
+    <link href="static/css/style.css" rel="stylesheet">
 </head>
     
 <body>
-    <form action="/login">
-      Username: <input type="text" name="username">
-      <br>
-      Password [change input type to password later]: <input type="text" name="pw">
-      <br>
-      <input type="submit" value="Login" name="submit">
-    </form>
-    <br>
-    <form action="/signup">
-      Don't have an account? Sign up: <input type="submit" value="Sign Up" name="submit">
-    </form>
+    <h1> Project Zero: Blog Site </h1>
+    <div class="author">
+        by me!
+    </div>
+
+    <div class="mAllBlogs"> SHOW ALL BLOGS HERE!!! </div>
+    <div class="mOptions">
+        <form action="/login" method="GET">
+            Been here before? <input type="submit" value="log in">
+        </form>
+        <form action="/signup" method="GET">
+            New around here? <input type="submit" value="sign up">
+        </form>
+    </div>
 </body>
     
 </html>
