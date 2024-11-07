@@ -11,8 +11,8 @@ db.commit()
 db.close()
 
 def addAcc(uname, pw):
-    db = squlite3.connect("data.db")
-    c = db.cursor(f"INSERT INTO accounts) {{uname}}, {{pw}}")
-    c.execute()
+    db = sqlite3.connect("data.db")
+    c = db.cursor()
+    c.execute(f"INSERT INTO accounts VALUES ('{ uname }', '{ pw }')")
     db.commit()
     db.close()

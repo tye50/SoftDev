@@ -7,7 +7,7 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from flask import session
-from flask import redirect
+from flask import redirect, url_for
 
 import database
 
@@ -26,11 +26,16 @@ def login():
 
 @app.route("/signup", methods=['GET', 'POST'])
 def signup():
-    return render_template("signup.html")
+    if (request.method == "GET"):
+        return render_template("signup.html")
+    elif (request.method == "POST"):
+        session['username'] = request.form["username"]
+        database.addAcc(request.form["username"], request.form["pw"]) # add account
+        return redirect(url_for("dashboard"))
 
-@app.route("/user", methods=['GET', 'POST'])
+@app.route("/dash", methods=['GET', 'POST'])
 def dashboard():
-    return render_template("dashboard.html")
+    return render_template("dashboard.html", uname = session['username'])
 
 @app.route("/edit", methods=['GET', 'POST'])
 def edit_page():
