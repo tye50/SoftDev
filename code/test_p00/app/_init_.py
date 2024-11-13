@@ -43,7 +43,11 @@ def edit_page():
 
 @app.route("/create", methods=['GET', 'POST'])
 def create_page():
-    return render_template("create_page.html")
+    if (request.method == "GET"):
+        return render_template("create_page.html")
+    elif (request.method == "POST"):
+        # create
+        return redirect(url_for("dashboard"))
 
 @app.route("/view", methods=['GET', 'POST'])
 def view():
@@ -51,6 +55,7 @@ def view():
 
 @app.route("/logout", methods=['GET', 'POST'])
 def logout():
+    session.pop("username")
     return redirect(url_for('root'))
 
 if __name__ == "__main__": 

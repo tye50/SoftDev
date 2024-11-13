@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 
 <head>
-    <title> </title>
+    <title> log in </title>
+    <link href="static/css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="sAccount">
         <form action="/signup" method="POST">
-            Username: <input type="text" name="username">
+            Username: <input type="text" name="username" required>
             <br>
-            Password: <input type="text" name="pw">
+            Password: <input type="password" name="pw" required>
             <br>
-            <input type="submit" value="create account">
+            <input type="submit" value="log in">
+        </form>
+        <form action="/signup" method="GET">
+            Don't have an account? <input type="submit" value="sign up">
         </form>
     </div>
 </body>

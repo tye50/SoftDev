@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 
 <head>
-    <title> </title>
+    <title> dashboard </title>
+    <link href="static/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    {{uname}}
+    <h1> {{ uname }}'s Dashboard </h1>
+    
+    <div class="dCreate">
+        <form action="/create" method="GET">
+            <input type="submit" value="new blog">
+        </form>
+    </div>
+    
+    <div class="dLogOut">
+        <form action="/logout" method="GET">
+            <input type="submit" value="log out">
+        </form>
+    </div>
 </body>
 
 </html>

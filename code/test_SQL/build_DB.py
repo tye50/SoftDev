@@ -28,7 +28,12 @@ for row in dict:
 
 # ---
 
-c.execute("ALTER TABLE cour ADD sound TEXT")
+# https://www.w3schools.com/sql/sql_alter.asp
+# c.execute("ALTER TABLE cour ADD sound TEXT")
+
+# !!!!!!!!! dont alter columns, bad practice!!
+# c.execute("FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = cour AND COLUMN_NAME = sound")
+
 #==========================================================
 
 db.commit() #save changes

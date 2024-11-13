@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 
 <head>
-    <title> </title>
+    <title> new blog </title>
+    <link href="static/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-
+    <div class="cMakeBlog">
+        <form action="/create" method="POST">
+            Blog Title: <input type="text" name="btitle" required>
+            <br>
+            First Entry: <input type="text" name="1" required>
+            <br>
+            <input type="submit" name="create blog">
+        </form>
+    </div>
 </body>
 
 </html>
