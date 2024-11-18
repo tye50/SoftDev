@@ -1,8 +1,10 @@
-KT: Tracy Ye, Kyle Lee
+# K22: Testing On-Ramps
+
+KT: Tracy Ye, Kyle Lee <br />
 SoftDev
 K22: Testing On-Ramps + Other FEFs : Tailwind & Foundation
 2024-11-18
-Time Spent :
+Time Spent : 2
 
 DISCO:
 
