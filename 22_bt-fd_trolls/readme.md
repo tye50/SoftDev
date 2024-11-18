@@ -14,8 +14,8 @@ q0 (Team Everything Bagel- Tailwind):
   1
 
 q0b (Team Everything Bagel- Tailwind): <br />
-  https://tailwindcss.com/docs/customizing-colors <br />
-  https://tailwindcss.com/docs/border-radius <br />
-  https://tailwindcss.com/docs/justify-content
+  - https://tailwindcss.com/docs/customizing-colors <br />
+  - https://tailwindcss.com/docs/border-radius <br />
+  - https://tailwindcss.com/docs/justify-content
 
 q1:
