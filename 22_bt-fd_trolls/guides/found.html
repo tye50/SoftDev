@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<!--
+  Chloe Wong, Vedant Kothari
+  Minerals
+  SoftDev
+  K20 - Foundation
+  2024-11-13
+  Time Spent: 1
+ -->
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.9.0/dist/css/foundation.min.css" crossorigin="anonymous">
+</head>
+
+<!--CSS-->
+<style>
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  font-weight: normal;
+}
+
+.stats-list {
+  list-style-type: none;
+  clear: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.stats-list .stats-list-positive {
+  color: #000000;
+}
+
+.stats-list .stats-list-negative {
+  color: #000000;
+}
+
+.stats-list > li {
+  display: inline-block;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #cacaca;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.stats-list > li:last-child {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stats-list > li .stats-list-label {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+
+.product-feature-section {
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.product-feature-section-outer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+  margin: 0 auto;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media print, screen and (min-width: 40em) {
+  .product-feature-section-outer {
+    max-width: 75%;
+  }
+}
+
+.product-feature-section-headline {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.product-feature-section-inner {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-feature-section-feature {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 1rem;
+  -webkit-flex: 1 0 50%;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product-feature-section-feature.top-left {
+  border-right: 1px solid #cacaca;
+  border-bottom: 1px solid #cacaca;
+}
+
+.product-feature-section-feature.top-right {
+  border-bottom: 1px solid #cacaca;
+}
+
+.product-feature-section-feature.bottom-left {
+  border-right: 1px solid #cacaca;
+}
+
+.product-feature-section-feature .feature-title {
+  margin-bottom: 0;
+  line-height: 16px;
+  font-size: 0.875rem;
+}
+
+.product-feature-section-feature .feature-desc {
+  margin-bottom: 0;
+}
+
+.product-feature-section-feature .fa {
+  margin-right: 1.25rem;
+  font-size: 2rem;
+}
+
+@media print, screen and (min-width: 40em) {
+  .product-feature-section-feature {
+    padding: 2rem;
+    -webkit-flex: 1 0 50%;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.simple-subscription-form {
+  background: #ffffff;
+  color: #000000;
+  padding: 2rem;
+  border-radius: 0;
+}
+
+.simple-subscription-form .button {
+  margin-bottom: 0;
+  border-radius: 0 0 0 0;
+}
+
+
+.social {
+  margin-right: .25rem;
+}
+
+.social.facebook {
+  background-color: #3b5998;
+  color: #fefefe;
+}
+
+.social.facebook:hover, .social.facebook:focus {
+  background-color: #2f477a;
+  color: #fefefe;
+}
+
+.social.twitter {
+  background-color: #55acee;
+  color: #fefefe;
+}
+
+.social.twitter:hover, .social.twitter:focus {
+  background-color: #1a8fe8;
+  color: #fefefe;
+}
+
+.social.linkedin {
+  background-color: #007bb5;
+  color: #fefefe;
+}
+
+.social.linkedin:hover, .social.linkedin:focus {
+  background-color: #006291;
+  color: #fefefe;
+}
+
+.social.youtube {
+  background-color: #bb0000;
+  color: #fefefe;
+}
+
+.social.youtube:hover, .social.youtube:focus {
+  background-color: #960000;
+  color: #fefefe;
+}
+
+.social.instagram {
+  background-color: #125688;
+  color: #fefefe;
+}
+
+.social.instagram:hover, .social.instagram:focus {
+  background-color: #0e456d;
+  color: #fefefe;
+}
+
+.social.pinterest {
+  background-color: #cb2027;
+  color: #fefefe;
+}
+
+.social.pinterest:hover, .social.pinterest:focus {
+  background-color: #a21a1f;
+  color: #fefefe;
+}
+
+.social.google-plus {
+  background-color: #dd4b39;
+  color: #fefefe;
+}
+
+.social.google-plus:hover, .social.google-plus:focus {
+  background-color: #be3221;
+  color: #fefefe;
+}
+
+.social.github {
+  background-color: #000000;
+  color: #fefefe;
+}
+
+.social.github:hover, .social.github:focus {
+  background-color: black;
+  color: #fefefe;
+}
+
+.social.tumblr {
+  background-color: #32506d;
+  color: #fefefe;
+}
+
+.social.tumblr:hover, .social.tumblr:focus {
+  background-color: #284057;
+  color: #fefefe;
+}
+
+.social > .fa {
+  color: #fefefe;
+  margin-right: .25rem;
+}
+
+.benefits {
+  margin-left: 30px;
+}
+
+</style>
+
+<body>
+
+  <nav class="scrollhide-nav">
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">Foundation How-To</li>
+          <li>
+            <ul class="menu horizontal">
+              <li><a href="#">One</a></li>
+              <li><a href="#">Two</a></li>
+              <li><a href="#">Three</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <li><button type="button" class="button">Search</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <ul class="stats-list"><br>
+      <h1>Team Minerals: Vedant Kothari & Chloe Wong [pd. 5]</h1>
+      <h2>Feature: Stats List</h2>
+      <li>
+        23900 <span class="stats-list-label">Github Stars</span>
+      </li>
+      <li class="stats-list-positive">
+          27000 <span class="stats-list-label">Daily Google Searches</span>
+      </li>
+      <li class="stats-list-negative">
+        12100 <span class="stats-list-label">Commits So Far</span>
+      </li>
+    </ul>
+    <section class="product-feature-section">
+      <h2>Feature: Product Feature Section</h2>
+      <div class="product-feature-section-outer">
+        <h4 class="product-feature-section-headline">Benefits of Foundation<div></h4>
+        <div class="product-feature-section-inner">
+          <div class="product-feature-section-feature top-left">
+            <i class="fa fa-shield" aria-hidden="true"></i>
+        <div>
+          <p class="feature-desc">Mobile First</p>
+        </div>
+      </div>
+      <div class="product-feature-section-feature top-right">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <div>
+          <p class="feature-desc">Customizable</p>
+        </div>
+      </div>
+      <div class="product-feature-section-feature bottom-left">
+        <i class="fa fa-coffee" aria-hidden="true"></i>
+        <div>
+          <p class="feature-desc">Faster For Users</p>
+        </div>
+      </div>
+      <div class="product-feature-section-feature bottom-right">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <div>
+          <p class="feature-desc">Navigable Website</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="benefits">
+<h5>1. Mobile First</h5>
+<p>You can build pages catered for small devices first, and them increase complexity as devices get larger for a complete responsive design.</p>
+
+<h5>2. Customizable</h5>
+<p>You can customize the smallest of elements in sites like never before, such as the size of columns, colors, fonts, etc.</p>
+
+<h5>3. Faster For Users</h5>
+<p>Due to having a faster core, Foundation allows you to create animations wth relatively fast loading soeeds and a simpler, cleaner, and faster visual aesthetic.</p>
+
+<h5>4. Navigable</h5>
+<p>The website is easy to navigate and contains hundreds of building blocks for you to get started learning Foundation.</p>
+</div>
+
+<div class="simple-subscription-form">
+  <form>
+    <h2>Feature: Subscription Form</h2>
+    <p>Receive updates and latest news direct from Team Minerals. Simply enter your email below :</p>
+    <div class="input-group">
+      <span class="input-group-label">
+        <i class="fa fa-envelope"></i>
+      </span>
+      <input class="input-group-field" type="email" placeholder="Email" required>
+      <button class="button">Sign up now</button>
+  </form>
+</div>
+
+<h2>Feature: Social Media Buttons</h2>
+<h4>Button as an Anchor tag</h4>
+<div class="clearfix"></div>
+<a href="#" class="button social facebook">
+  <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+</a>
+<a href="#" class="button social twitter">
+  <i class="fa fa-twitter" aria-hidden="true"></i> Twitter
+</a>
+<a href="#" class="button social linkedin">
+  <i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin
+</a>
+<a href="#" class="button social youtube">
+  <i class="fa fa-youtube" aria-hidden="true"></i> Youtube
+</a>
+<a href="#" class="button social instagram">
+  <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+</a>
+<a href="#" class="button social pinterest">
+  <i class="fa fa-pinterest-p" aria-hidden="true"></i> Pinterest
+</a>
+<a href="#" class="button social google-plus">
+  <i class="fa fa-google-plus" aria-hidden="true"></i> Google +
+</a>
+<a href="#" class="button social github">
+  <i class="fa fa-github" aria-hidden="true"></i> Github
+</a>
+<a href="#" class="button social tumblr">
+  <i class="fa fa-tumblr" aria-hidden="true"></i> Tumblr
+</a><br><br>
+
+<h2>Setting Up Your Project</h2>
+    <p>After downloading the CSS files, follow these simple steps to get started:</p>
+    <ol>
+        <li>First, after you unzip the package, move the folder to your desired location and open it in a text editor. If you don't have one already, we use Sublime Text here at ZURB because it's very customizable, powerful, and simply rocks.</li>
+        <li>The <code>index.html</code> is your homepage. It has been linked up with foundation.css, normalize, and all the necessary JavaScript files for you. Just add your code between the <code>body</code> tags.</li>
+        <li>Next, you should create a new stylesheet and link it in the header of your HTML file</li>
+        <li>Customize elements of the front-end, such as navbars, social media icons, and scroll windows like never before. Make the most user-friendly websites with Foundation today!</li>
+    </ol>
+    <p>Find more detailed instructions <a href="https://get.foundation/sites/docs-v5/css.html">here</a>.<p>
+
+</body>
