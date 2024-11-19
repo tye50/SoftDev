@@ -18,4 +18,5 @@ q0b (Team Everything Bagel- Tailwind):
   - https://tailwindcss.com/docs/border-radius
   - https://tailwindcss.com/docs/justify-content
 
-q1:
+q1:  
+At the moment of writing this, I prefer bootstrap (the one I worked on for k20) more than tailwind. I don't like how tailwind removes all the default stylizations (like h1 won't make the text large and bold) and turns everything into an empty div. I will update with foundations soon...
