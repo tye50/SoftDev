@@ -6,9 +6,6 @@ import urllib.request
 import urllib.parse
 import json
 
-with open("key_nasa.txt", "r") as file:
-    mykey = file.read()
-
 app = Flask(__name__)
 
 @app.route("/")
