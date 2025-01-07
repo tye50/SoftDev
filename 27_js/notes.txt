@@ -25,7 +25,6 @@ NOTES ::
 Q ::
 - - - 
     Pressing 'enter' to move on to the next section of the code (ex: multiple if-statements) automatically ends the function. To prevent that, must shift+enter. But then the indenting is off. Very inconvenient, how to do more easily?
-    Why would someone use first-class functions over just printing something out?
 
 C ::
 - - -
