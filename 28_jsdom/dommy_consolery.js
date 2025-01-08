@@ -51,7 +51,7 @@ var f = function(x)			// printing will open debugger and highlight this function
 };
 
 
-//instantiate an object
+//instantiate an object			the clickdown for o is populated with this information
 var o = { 'name' : 'Thluffy',
           age : 1024,
           items : [10, 20, 30, 40],
@@ -62,7 +62,7 @@ var o = { 'name' : 'Thluffy',
         };
 
 //create a new node in the tree
-var addItem = function(text)
+var addItem = function(text)		// --> adds the new string to the list
 {
     var list = document.getElementById("thelist");
     var newitem = document.createElement("li");
@@ -71,19 +71,21 @@ var addItem = function(text)
 };
 
 //prune a node from the tree
-var removeItem = function(n)
+var removeItem = function(n)		// --> removes the list element
 {
-    var listitems = document.getElementsByTagName('li');
-    listitems[n].remove();
+    var listitems = document.getElementsByTagName('li');		// compiles a list of every 'li', meaning you can 
+    listitems[n].remove();										// remove from other lists too by increasing index
 };
 
 //color selected elements red
-var red = function()
+var red = function()		// if the element does not already have a red class, appends
 {
     var items = document.getElementsByTagName("li");
+    // console.log(items)
     for(var i = 0; i < items.length; i++) {
 	items[i].classList.add('red');
     }
+    // console.log(items)
 };
 
 //color a collection in alternating colors
@@ -102,15 +104,50 @@ var stripe = function()
 
 //insert your implementations here for...
 // FIB
+var fib = function(n){
+  if(n == 0){
+    return 0;
+  }
+    if(n == 1){
+    return 1;
+  }
+  return fib(n-1)+fib(n-2);
+}; 
 // FAC
+var fact = function(n){
+  if(n == 1){
+    return 1;
+  }
+    return (n*fact(n-1));
+};
 // GCD
-
+var GCD = function(n1, n2){
+  if (n1 <= n2) {
+    var min = n1;
+    var max = n2;
+  }
+  else {
+    var min = n2;
+    var max = n1;
+  }
+  for (var i = min; i > 0; i--) {
+    if (min%i == 0 && max%i == 0) {
+      return i;
+    }
+  }
+  return 1;
+};
 
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.
 //  Note anything notable.
 const myFxn = (param1, param2) => {
-    // body
+    var retVal = "do cats like humans as much as humans like cats?"
+    if (param1 > param2) {
+        console.log("The magic 8 ball says: alas, they do not");
+    }
+    else { console.log("The magic 8 ball says: of course!"); }
     return retVal;
 };
-
+        // no body --> retVal not defined error
+        // nothing ever requires the parameters to be filled out.... which is annoying that it still runs
