@@ -5,9 +5,12 @@ K28 -- Manipulating the DOM
 
 NOTES ::
 - - - - - - -
+None of the coloring functions work if the class already exists, I wonder if I can strip the classes before each function. 
 
 Q ::
 - - - - - - -
+When I do o.func(o.items), it returns '10,20,30,4030'. Why does it treat the values like strings and why does it only append to the last one?
+
 
 C ::
 - - - - - - -
