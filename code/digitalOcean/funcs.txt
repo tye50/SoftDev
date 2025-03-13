@@ -1,0 +1,9 @@
+sudo : root commands
+
+systemctl restart sshd : after messing with ssh perms
+
+sudo nginx -t : checks if all your nginx files are in order
+systemctl status nginx : shows if website is active
+systemctl start/stop/restart nginx : start/end/restart website
+
+http:// [ip address] : open server
