@@ -1,0 +1,12 @@
+Can you create a flask app inside a python file called "__init__.py" that serves a html page with buttons that allow you to log in, register a new account, and log out
+
+Can you add the logic into "__init__.py" so that users who have not registered cannot log in? Please store inside a SQLITE3 database
+
+Please update the files so that when the user tries to log in without having registers, it will send a flash message prompting them to register an account first and redirect the user to the register page
+
+In line 40 of the python file, an error is generated because you did not reopen the database before accessing it. please fix this
+
+Please update the html files so that the flash messages will appear
+
+Once users are logged in, their page should have a button that allows them to create a new blog with is added into a seperate table in the database. The blog should allow the user to enter a blog title and contents
+

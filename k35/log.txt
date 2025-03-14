@@ -1,7 +1,13 @@
 '''
-GarfieldsCatHair: Sasha M, Chloe W, Moyo F, Claire S
+TA: Tracy Y, Ankita S
 SoftDev
-P02: TuneTown
+K35: Now Again for the First Time
 2025-01-15
 Time Spent:
 '''
+
+- It imported the necessary modules (including sessions, which we did not ask for)
+- When prompted to use SQLITE3, it added flash messages
+- Created an error (purple screen of death!!) by not reopening the database after closing it (in the if statement)
+- When prompted to add flash messages, it will only update the python file unless specifically prompted to also update the HTML files
+- 
