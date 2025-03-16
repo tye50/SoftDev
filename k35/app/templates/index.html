@@ -2,6 +2,17 @@
 <html>
 <head>
     <title>Home</title>
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .blog-excerpt {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome</h1>
@@ -22,5 +33,15 @@
         <a href="{{ url_for('login') }}"><button>Login</button></a>
         <a href="{{ url_for('register') }}"><button>Register</button></a>
     {% endif %}
+    
+    <div class="blog-grid">
+        {% for blog in blogs %}
+        <div class="blog-excerpt">
+            <h2>{{ blog[0] }}</h2>
+            <p>{{ blog[1][:100] }}{% if blog[1]|length > 100 %}...{% endif %}</p>
+            <a href="{{ url_for('view_blog', blog_id=loop.index) }}"><button>Read More</button></a>
+        </div>
+        {% endfor %}
+    </div>
 </body>
 </html>

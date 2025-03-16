@@ -6,8 +6,22 @@ K35: Now Again for the First Time
 Time Spent:
 '''
 
+    ####################################################
+    
+DISCO:
+
+Q/C/C:
+some areas of interest...
+q0: How many tries did it take to "get it right?"
+q1: Did you catch any errors? If so, how did you notice, and what did you do?
+q2: How similar or different is the bot's output to that of your past self / old team?
+
+    ####################################################
+    
+    
 - It imported the necessary modules (including sessions, which we did not ask for)
 - When prompted to use SQLITE3, it added flash messages
 - Created an error (purple screen of death!!) by not reopening the database after closing it (in the if statement)
 - When prompted to add flash messages, it will only update the python file unless specifically prompted to also update the HTML files
+- When I put multiple steps in at once while using transition words (first, next, then, finally), it ignored the command after the "finally" instruction. 
 - 

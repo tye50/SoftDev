@@ -25,7 +25,12 @@ init_db()
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    conn = sqlite3.connect('app.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT title, content FROM blogs ORDER BY RANDOM() LIMIT 9')
+    blogs = cursor.fetchall()
+    conn.close()
+    return render_template('index.html', blogs=blogs)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -68,8 +73,11 @@ def register():
         try:
             cursor.execute('INSERT INTO users (username, password) VALUES (?, ?)', (username, password))
             conn.commit()
-            flash('Registration successful! Please log in.')
-            return redirect(url_for('login'))
+            user_id = cursor.lastrowid
+            session['username'] = username
+            session['user_id'] = user_id
+            flash('Registration successful!')
+            return redirect(url_for('home'))
         except sqlite3.IntegrityError:
             flash('Username already exists')
         finally:
@@ -104,6 +112,29 @@ def create_blog():
         return redirect(url_for('home'))
 
     return render_template('create_blog.html')
+
+@app.route('/blog/<int:blog_id>', methods=['GET', 'POST'])
+def view_blog(blog_id):
+    conn = sqlite3.connect('app.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT user_id, title, content FROM blogs WHERE id = ?', (blog_id,))
+    blog = cursor.fetchone()
+    conn.close()
+
+    if request.method == 'POST':
+        if 'username' in session and session['user_id'] == blog[0]:
+            title = request.form['title']
+            content = request.form['content']
+            conn = sqlite3.connect('app.db')
+            cursor = conn.cursor()
+            cursor.execute('UPDATE blogs SET title = ?, content = ? WHERE id = ?', (title, content, blog_id))
+            conn.commit()
+            conn.close()
+            flash('Blog updated successfully!')
+            return redirect(url_for('view_blog', blog_id=blog_id))
+
+    can_edit = 'username' in session and session['user_id'] == blog[0]
+    return render_template('view_blog.html', blog=blog, can_edit=can_edit)
 
 if __name__ == '__main__':
     app.run(debug=True)

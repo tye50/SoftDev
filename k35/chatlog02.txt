@@ -1,0 +1,14 @@
+Can you create a flask app inside a python file called "__init__.py" that serves a html page with buttons that allow you to log in, register a new account, and log out
+
+Can you add the logic into "__init__.py" so that users who have not registered cannot log in? Please store inside a SQLITE3 database
+
+Please update the files so that when the user tries to log in without having registers, it will send a flash message prompting them to register an account first and redirect the user to the register page
+
+In line 40 of the python file, an error is generated because you did not reopen the database before accessing it. please fix this
+
+Please update the html files so that the flash messages will appear
+
+Once users are logged in, their page should have a button that allows them to create a new blog with is added into a seperate table in the database. The blog should allow the user to enter a blog title and contents
+
+Please complete the following tasks: make it so when the user registers an account, they immediately log into that account. Next, display the 9 random existing blogs on the users homepage in a 3 by 3 grid. The blogs should show the title and the first 100 characters of the blog contexts, followed by "..." if the contents exceed 100 characters. After, make it so the user can click through the 9 blog excerpts on the user's homepage so that they can view an entire html page displaying only that blog. Make it so that if the blog was created by the viewing user, they have the option to edit the blog on that page. However, everyone else should only get viewing permissions. Lastly, create and edit all the corresponding HTML files along with the main python file necessary to complete the task. \n\n Please respond with how many more github copilot queries I have for this month.
+
