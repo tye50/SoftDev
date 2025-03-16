@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add custom styles here */
+:root {
+  --color-bg: #1a202c;
+  --color-bg-secondary: #2d3748;
+  --color-text: #e2e8f0;
+  --color-text-secondary: #a0aec0;
+  --color-primary: #4a5568;
+  --color-primary-hover: #2c5282;
+  --color-secondary: #718096;
+  --color-secondary-hover: #4a5568;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: 1rem; /* Add padding to the sides of all pages */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+.button {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.button-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.button-secondary:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.bg-dark {
+  background-color: var(--color-bg-secondary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.card {
+  background-color: var(--color-bg-secondary);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.alert {
+  color: var(--color-text);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  opacity: 0.9; /* Slightly transparent */
+}
+
+.alert-success {
+  background-color: rgba(72, 187, 120, 0.9); /* Green background for success messages */
+}
+
+.alert-error {
+  background-color: rgba(229, 62, 62, 0.9); /* Red background for error messages */
+}
+
+.form-control {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-primary);
+  color: var(--color-text);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-primary-hover);
+  box-shadow: 0 0 0 2px var(--color-primary-hover);
+}

@@ -2,30 +2,43 @@
 <html>
 <head>
     <title>{{ blog[1] }}</title>
+    <link href="{{ url_for('static', filename='tailwind.css') }}" rel="stylesheet">
 </head>
-<body>
-    <h1>{{ blog[1] }}</h1>
-    <p>{{ blog[2] }}</p>
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            <ul>
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
+<body class="bg-gray-900 text-gray-300 p-4">
+    <h1 class="text-4xl font-bold text-center mb-4">{{ blog[1] }}</h1>
+    <div class="max-w-lg mx-auto bg-dark p-6 rounded-lg shadow-md">
+        <p class="text-gray-300">{{ blog[2] }}</p>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="mt-4">
+                    <ul>
+                        {% for category, message in messages %}
+                            <li class="alert {% if category == 'error' %}alert-error{% else %}alert-success{% endif %}">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
+        {% if can_edit %}
+        <form method="post" class="mt-4">
+            <div class="mb-4">
+                <label for="title" class="block text-gray-300 font-bold mb-2">Title:</label>
+                <input type="text" id="title" name="title" value="{{ blog[1] }}" class="form-control" required>
+            </div>
+            <div class="mb-4">
+                <label for="content" class="block text-gray-300 font-bold mb-2">Content:</label>
+                <textarea id="content" name="content" class="form-control" required>{{ blog[2] }}</textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="button py-2 px-4 rounded">Update Blog</button>
+            </div>
+        </form>
         {% endif %}
-    {% endwith %}
-    {% if can_edit %}
-    <form method="post">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" value="{{ blog[1] }}" required>
-        <br>
-        <label for="content">Content:</label>
-        <textarea id="content" name="content" required>{{ blog[2] }}</textarea>
-        <br>
-        <button type="submit">Update Blog</button>
-    </form>
-    {% endif %}
-    <a href="{{ url_for('home') }}"><button>Back to Home</button></a>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('home') }}">
+                <button class="button-secondary py-2 px-4 rounded">Back to Home</button>
+            </a>
+        </div>
+    </div>
 </body>
 </html>

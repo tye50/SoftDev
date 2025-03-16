@@ -24,4 +24,5 @@ q2: How similar or different is the bot's output to that of your past self / old
 - Created an error (purple screen of death!!) by not reopening the database after closing it (in the if statement)
 - When prompted to add flash messages, it will only update the python file unless specifically prompted to also update the HTML files
 - When I put multiple steps in at once while using transition words (first, next, then, finally), it ignored the command after the "finally" instruction. 
-- 
+- Copilot completely forgot about one of the html files at some point.
+- Copilot seems unable to figure out what a 3x3 grid looks like.

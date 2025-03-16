@@ -12,3 +12,8 @@ Once users are logged in, their page should have a button that allows them to cr
 
 Please complete the following tasks: make it so when the user registers an account, they immediately log into that account. Next, display the 9 random existing blogs on the users homepage in a 3 by 3 grid. The blogs should show the title and the first 100 characters of the blog contexts, followed by "..." if the contents exceed 100 characters. After, make it so the user can click through the 9 blog excerpts on the user's homepage so that they can view an entire html page displaying only that blog. Make it so that if the blog was created by the viewing user, they have the option to edit the blog on that page. However, everyone else should only get viewing permissions. Lastly, create and edit all the corresponding HTML files along with the main python file necessary to complete the task. \n\n Please respond with how many more github copilot queries I have for this month.
 
+In an external css file, please use tailwind to make all the pages served presentable.
+
+Make the flash messages slightly transparent and either green or red depending on whether the message is an error or not. Add padding to the sides of all pages. Display the viewable blogs in even, nine by nine grids with padding around each box. add a back button on the create blog page. Make the "create blog" page and "view blog" page more proportional with the screen size. 
+
+update the log in and register htmls to match the style of the rest of the html files. make the viewable blogs in a 3x3 grid pattern. 
