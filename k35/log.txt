@@ -3,7 +3,7 @@ TA: Tracy Y, Ankita S
 SoftDev
 K35: Now Again for the First Time
 2025-01-15
-Time Spent:
+Time Spent: 1 horas
 '''
 
     ####################################################
@@ -13,9 +13,12 @@ DISCO:
 Q/C/C:
 some areas of interest...
 q0: How many tries did it take to "get it right?"
+    One or two for almost all the steps. It created the purple screen of death only once. 
 q1: Did you catch any errors? If so, how did you notice, and what did you do?
+    Yes, Copilot reopens and closes the db inside the main python file every time it needs to access it, so it lost track and forgot to generate the reopening at some point. We read the error message on the PSOD and then scanned the line where it appeared. 
 q2: How similar or different is the bot's output to that of your past self / old team?
-
+    Scarily similar, even the "Welcome" message that none of us were instructed to add but more people did add. The CSS is ugly though.
+    
     ####################################################
     
     
@@ -24,4 +27,5 @@ q2: How similar or different is the bot's output to that of your past self / old
 - Created an error (purple screen of death!!) by not reopening the database after closing it (in the if statement)
 - When prompted to add flash messages, it will only update the python file unless specifically prompted to also update the HTML files
 - When I put multiple steps in at once while using transition words (first, next, then, finally), it ignored the command after the "finally" instruction. 
-- 
+- Copilot completely forgot about one of the html files at some point.
+- Copilot seems unable to figure out what a 3x3 grid looks like.

@@ -2,44 +2,50 @@
 <html>
 <head>
     <title>Home</title>
-    <style>
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-        }
-        .blog-excerpt {
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
-    </style>
+    <link href="{{ url_for('static', filename='tailwind.css') }}" rel="stylesheet">
 </head>
-<body>
-    <h1>Welcome</h1>
-    {% with messages = get_flashed_messages() %}
+<body class="bg-gray-900 text-gray-300 p-4">
+    <h1 class="text-4xl font-bold text-center mb-4">Welcome</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
-            <ul>
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
+            <div>
+                <ul>
+                    {% for category, message in messages %}
+                        <li class="alert {% if category == 'error' %}alert-error{% else %}alert-success{% endif %}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
         {% endif %}
     {% endwith %}
     {% if 'username' in session %}
-        <p>Hello, {{ session['username'] }}!</p>
-        <a href="{{ url_for('create_blog') }}"><button>Create Blog</button></a>
-        <a href="{{ url_for('logout') }}"><button>Logout</button></a>
+        <p class="text-xl text-center">Hello, {{ session['username'] }}!</p>
+        <div class="text-center my-4">
+            <a href="{{ url_for('create_blog') }}">
+                <button class="button py-2 px-4 rounded">Create Blog</button>
+            </a>
+            <a href="{{ url_for('logout') }}">
+                <button class="button-secondary py-2 px-4 rounded">Logout</button>
+            </a>
+        </div>
     {% else %}
-        <a href="{{ url_for('login') }}"><button>Login</button></a>
-        <a href="{{ url_for('register') }}"><button>Register</button></a>
+        <div class="text-center my-4">
+            <a href="{{ url_for('login') }}">
+                <button class="button py-2 px-4 rounded">Login</button>
+            </a>
+            <a href="{{ url_for('register') }}">
+                <button class="button-secondary py-2 px-4 rounded">Register</button>
+            </a>
+        </div>
     {% endif %}
     
-    <div class="blog-grid">
+    <div class="grid grid-cols-3 gap-4">
         {% for blog in blogs %}
-        <div class="blog-excerpt">
-            <h2>{{ blog[0] }}</h2>
-            <p>{{ blog[1][:100] }}{% if blog[1]|length > 100 %}...{% endif %}</p>
-            <a href="{{ url_for('view_blog', blog_id=loop.index) }}"><button>Read More</button></a>
+        <div class="card">
+            <h2 class="text-xl font-bold">{{ blog[0] }}</h2>
+            <p class="text-secondary">{{ blog[1][:100] }}{% if blog[1]|length > 100 %}...{% endif %}</p>
+            <a href="{{ url_for('view_blog', blog_id=loop.index) }}">
+                <button class="button py-2 px-4 rounded mt-2">Read More</button>
+            </a>
         </div>
         {% endfor %}
     </div>
