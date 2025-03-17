@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ blog[1] }}</title>
+</head>
+<body>
+    <h1>{{ blog[1] }}</h1>
+    <p>{{ blog[2] }}</p>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    {% if can_edit %}
+    <form method="post">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="{{ blog[1] }}" required>
+        <br>
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" required>{{ blog[2] }}</textarea>
+        <br>
+        <button type="submit">Update Blog</button>
+    </form>
+    {% endif %}
+    <a href="{{ url_for('home') }}"><button>Back to Home</button></a>
+</body>
+</html>
