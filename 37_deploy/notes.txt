@@ -1,0 +1,22 @@
+- install python
+- install venv
+- make the directory
+- how to write with thonny inside droplet?
+- inside venv, download reqs and create app
+- wheel lets you use things even if theyre missing stuff??
+- allow port 5000 through firewall
+- what is the function of the WSGI entry point?
+- confused abt configuring... --> allows nginx to see my directory
+- confused abt configuring..! --> allows to access directly through http://my_domain
+        <---- I am here!
+- then secure using crtbot??
+
+
+##############################################
+##############################################
+##############################################
+
+
+Secure domain name via .Tech domain:
+    Can access with my own domain name instead of port now --> always on?
+DNS (Domain Name System/Server)
