@@ -8,8 +8,8 @@
 - what is the function of the WSGI entry point?
 - confused abt configuring... --> allows nginx to see my directory
 - confused abt configuring..! --> allows to access directly through http://my_domain
-        <---- I am here!
 - then secure using crtbot??
+        <---- I am here! woohoo
 
 
 ##############################################
