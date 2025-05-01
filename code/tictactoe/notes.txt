@@ -1,0 +1,8 @@
+https://github.com/techwithtim/Network-Game-Tutorial
+    - long
+    - local(?) mutliplayer
+   
+https://www.youtube.com/watch?v=eJtD5vl00HA
+    - auto update
+    - real-time chat app
+    - code found here: https://github.com/demoskp/flask-socketio-tutorial
