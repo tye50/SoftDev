@@ -1,0 +1,25 @@
+https://github.com/techwithtim/Network-Game-Tutorial
+    - long
+    - local(?) mutliplayer
+   
+https://www.youtube.com/watch?v=eJtD5vl00HA
+    - auto update
+    - real-time chat app
+    - code found here: https://github.com/demoskp/flask-socketio-tutorial
+    - socket.io
+    
+https://www.youtube.com/watch?v=rxzOqP9YwmM
+    - node.js
+    - socket.io
+    - 5:45
+    
+    
+######################################################################################
+$npm [name]
+    - part of node.js, easily installs modules
+$npm i 
+    - install all in npm packages file
+$npm i [module]
+    - installs the module, ex. socket.io
+$npm i nodemon
+    - allows the page to auto refresh after each input
