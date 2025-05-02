@@ -1,7 +1,7 @@
 import math, random, time
 
 def createPlane(r, c):
-    return [[0]*c]*r
+    return [[0 for i in range(c)] for j in range(r)]
 
 def createSchedule(): # (plane, time, has_seats_available)
     sched = []

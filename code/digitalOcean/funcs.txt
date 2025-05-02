@@ -6,4 +6,6 @@ sudo nginx -t : checks if all your nginx files are in order
 systemctl status nginx : shows if website is active
 systemctl start/stop/restart nginx : start/end/restart website
 
+systemctl systemctl restart myproject : restarts project
+
 http:// [ip address] : open server

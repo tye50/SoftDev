@@ -13,6 +13,10 @@ https://www.youtube.com/watch?v=rxzOqP9YwmM
     - socket.io
     - 5:45
     
+https://www.w3schools.com/js/default.asp
+https://socket.io/
+https://nodejs.org/docs/latest/api/
+https://www.npmjs.com/
     
 ######################################################################################
 $npm [name]
